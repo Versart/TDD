@@ -6,9 +6,11 @@ public class Pilha {
     public String[] elementos;
     private int size;
 
+    private static final int TAMANHO_MAXIMO = 10;
+
     public Pilha() {
         this.size = 0;
-        elementos = new String[10];
+        elementos = new String[TAMANHO_MAXIMO];
     }
     public boolean isEmpty() {
         return this.size == 0;
@@ -19,8 +21,8 @@ public class Pilha {
     }
 
     public void push(String elemento) {
-        if(this.size == 10) {
-            throw new PilhaCheiaException("Pilha Cheia!");
+        if(this.size == TAMANHO_MAXIMO) {
+            throw new PilhaCheiaException("Pilha Cheia! A pilha já possui " + this.size + " elementos");
         }
         elementos[size] = elemento;
         this.size++;

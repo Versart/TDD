@@ -50,10 +50,13 @@ public class PilhaTeste {
 
     @Test
     public void deveLancarExceptionAoTentarAdicionarElementoNaPilhaCheia() {
+
+        PilhaCheiaException aThrows =
         assertThrows(PilhaCheiaException.class, () -> {
             for(int i=0; i < 11; i++){
                 pilha.push("Maria");
             }
         });
+        assertEquals("Pilha Cheia! A pilha já possui 10 elementos", aThrows.getMessage());
     }
 }
