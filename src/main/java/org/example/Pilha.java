@@ -28,6 +28,9 @@ public class Pilha {
     }
 
     public String pop() {
+        if(this.isEmpty()){
+            throw new PilhaVaziaException("A pilha está vazia!");
+        }
         String elementoRetirado = peek();
         elementos[size -1] = null;
         size--;

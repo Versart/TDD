@@ -40,4 +40,18 @@ public class PilhaTeste {
         assertEquals("Maria",pilha.peek());
         assertEquals("João", elementoRetirado);
     }
+
+    @Test
+    public void deveLancarExceptionAoTentarRemoverDaPilhaVazia() {
+        assertThrows(PilhaVaziaException.class, () -> {
+            pilha.pop();
+        });
+    }
+
+    @Test
+    public void deveLancarExceptionAoTentarAdicionarElementoNaPilhaCheia() {
+        assertThrows(PilhaCheiaException.class, () -> {
+            pilha.push();
+        });
+    }
 }
