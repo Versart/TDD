@@ -43,15 +43,17 @@ public class PilhaTeste {
 
     @Test
     public void deveLancarExceptionAoTentarRemoverDaPilhaVazia() {
-        assertThrows(PilhaVaziaException.class, () -> {
-            pilha.pop();
-        });
+        assertThrows(PilhaVaziaException.class, () ->
+            pilha.pop()
+        );
     }
 
     @Test
     public void deveLancarExceptionAoTentarAdicionarElementoNaPilhaCheia() {
         assertThrows(PilhaCheiaException.class, () -> {
-            pilha.push();
+            for(int i=0; i < 11; i++){
+                pilha.push("Maria");
+            }
         });
     }
 }

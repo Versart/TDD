@@ -19,6 +19,9 @@ public class Pilha {
     }
 
     public void push(String elemento) {
+        if(this.size == 10) {
+            throw new PilhaCheiaException("Pilha Cheia!");
+        }
         elementos[size] = elemento;
         this.size++;
     }
