@@ -28,7 +28,7 @@ public class Pilha {
     }
 
     public String pop() {
-        String elementoRetirado = elementos[size - 1];
+        String elementoRetirado = peek();
         elementos[size -1] = null;
         size--;
         return elementoRetirado;
