@@ -13,8 +13,14 @@ public class CamelCaseTest {
 
     @Test
     public void deveTransformarUmaPalavraEmUmaListString() {
-        assertSame(ArrayList.class,TransformCamelCase.transform("nome").getClass());
+        assertEquals(ArrayList.class,TransformCamelCase.transform("nome").getClass());
     }
+
+    @Test
+    public void deveTranformarUmaPalavraEmCamelCaseEmUmaListString() {
+        assertEquals(2,TransformCamelCase.transform("CarroAmarelo").size());
+    }
+
 
 
 
