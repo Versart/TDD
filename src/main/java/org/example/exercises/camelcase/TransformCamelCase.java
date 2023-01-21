@@ -1,7 +1,12 @@
 package org.example.exercises.camelcase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TransformCamelCase {
-    public static String transform(String nome) {
-        return nome;
+    public static List<String> transform(String nome) {
+        List<String> palavras = new ArrayList<>();
+        palavras.add(nome);
+       return palavras;
     }
 }
